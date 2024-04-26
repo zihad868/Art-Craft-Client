@@ -59,8 +59,8 @@ const Navbar = () => {
           </div>
           <div className="navbar-end">
             <div className="space-x-3">
-              <Link className="btn">Sign in</Link>
-              <Link className="btn">Sign up</Link>
+              <Link to='/signin' className="btn">Sign in</Link>
+              <Link to='/signup' className="btn">Sign up</Link>
             </div>
           </div>
         </div>
