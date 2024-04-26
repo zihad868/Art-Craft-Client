@@ -1,21 +1,17 @@
-import "./Navbar.css";
-import logo from "../../assets/Logo/ArtCraft.jpeg";
 import { Link, NavLink } from "react-router-dom";
+import logo from '../../assets/Logo/ArtCraft.jpeg'
 
-const Navbar = () => {
-  const navLink = (
-    <>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/art-craft">Art craft</NavLink>
-      <NavLink to="/add-craft">Add Craft</NavLink>
-      <NavLink to="/my-craft">My Art Craft</NavLink>
-    </>
-  );
-
+const Nav = () => {
+    const navLink = (
+        <>
+          <NavLink to='/'>Home</NavLink> 
+          <NavLink to='/art-craft'>Art craft</NavLink>
+          <NavLink to='/add-craft'>Add Craft</NavLink>
+          <NavLink to='/my-craft'>My Art Craft</NavLink>
+        </>
+      );
   return (
-    <div className="navImage">
-      <div>
-        <div className="navbar">
+    <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -47,13 +43,11 @@ const Navbar = () => {
             </div>
             <div className="flex items-center justify-center">
               <img className="rounded-xl w-12" src={logo} alt="" />
-              <a className="btn btn-ghost text-5xl text-green-900">
-                Art<span className="text-">Craft</span>
-              </a>
+              <a className="btn btn-ghost text-5xl text-green-900">Art<span className="text-">Craft</span></a>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal space-x-6 font-bold text-2xl text-white">
+            <ul className="menu menu-horizontal space-x-6 font-bold text-2xl text-black">
               {navLink}
             </ul>
           </div>
@@ -64,21 +58,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Banner */}
-      <div className="mt-36">
-        <h1 className="text-5xl text-sky-400 font-bold uppercase text-center ">
-          Craft Someth<span className="text-rose-500">ings Beautiful</span>
-        </h1>
-        <p className="w-3/4 text-2xl text-gray-900 mt-9 text-center mx-auto">
-          Embrace the warmth of genuine smiles, the allure of shared stories,
-          and the promise of belonging in a sanctuary where hearts connect and
-          dreams take flight.
-        </p>
-      </div>
-    </div>
   );
 };
 
-export default Navbar;
+export default Nav;
