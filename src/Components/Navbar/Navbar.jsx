@@ -5,10 +5,32 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const navLink = (
     <>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/art-craft">Art craft</NavLink>
-      <NavLink to="/add-craft">Add Craft</NavLink>
-      <NavLink to="/my-craft">My Art Craft</NavLink>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? "bg-sky-400 rounded-lg p-2" : "p-2"
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/art-craft"
+        className={({ isActive }) => (isActive ? "underline p-2" : "p-2")}
+      >
+        Art craft
+      </NavLink>
+      <NavLink
+        to="/add-craft"
+        className={({ isActive }) => (isActive ? "underline p-2" : "p-2")}
+      >
+        Add Craft
+      </NavLink>
+      <NavLink
+        to="/my-craft"
+        className={({ isActive }) => (isActive ? "underline p-2" : "p-2")}
+      >
+        My Art Craft
+      </NavLink>
     </>
   );
 
@@ -59,8 +81,12 @@ const Navbar = () => {
           </div>
           <div className="navbar-end">
             <div className="space-x-3">
-              <Link to='/signin' className="btn">Sign in</Link>
-              <Link to='/signup' className="btn">Sign up</Link>
+              <Link to="/signin" className="btn">
+                Sign in
+              </Link>
+              <Link to="/signup" className="btn">
+                Sign up
+              </Link>
             </div>
           </div>
         </div>

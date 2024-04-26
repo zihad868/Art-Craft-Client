@@ -7,3 +7,9 @@
     background-size: cover;
     background-position: center;
 }
+
+.active-nav-link{
+    text-decoration: underline;
+    text-decoration-color: red;
+    
+}
