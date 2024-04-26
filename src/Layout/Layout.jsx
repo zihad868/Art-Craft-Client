@@ -1,8 +1,9 @@
+import Navbar from "../Components/Navbar/Navbar";
 
 const Layout = () => {
     return (
         <div>
-            <h2 className="text-2xl">Layout</h2>
+            <Navbar />
         </div>
     );
 };

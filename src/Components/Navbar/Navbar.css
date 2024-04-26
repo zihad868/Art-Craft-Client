@@ -1,0 +1,9 @@
+
+.navImage{
+    background-image: url('../../assets/BackgroundImage/backgroundImage1.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
