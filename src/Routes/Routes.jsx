@@ -6,6 +6,7 @@ import AddCraft from "../Pages/AddCraft";
 import MyCraft from "../Pages/MyCraft";
 import Signup from "../Pages/Signup";
 import Signin from "../Pages/Signin";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
 
       {
         path: '/my-craft',
-        element: <MyCraft />
+        element: <PrivateRoute> <MyCraft /> </PrivateRoute>,
       },
       {
         path: '/signup',
