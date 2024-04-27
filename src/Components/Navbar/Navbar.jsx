@@ -1,8 +1,13 @@
 import "./Navbar.css";
 import logo from "../../assets/Logo/ArtCraft.jpeg";
 import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthProvider } from "../../Provider/FirebaseAuthProvider";
 
 const Navbar = () => {
+  const {user} = useContext(AuthProvider)
+
+  console.log(user)
   const navLink = (
     <>
       <NavLink
