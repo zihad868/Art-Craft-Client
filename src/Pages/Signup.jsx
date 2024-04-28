@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [errorMessage, setErrorMessage] = useState('')
-  const {createUser} = useContext(AuthProvider)
+  const {createUser, updateUserProfile} = useContext(AuthProvider)
   const navigate = useNavigate();
 
     const {
@@ -36,6 +36,7 @@ const Signup = () => {
 
         createUser(email, password)
           .then((userCredential) => {
+             updateUserProfile(name, photo)
              console.log(userCredential.user)
              Swal.fire({
               position: "top",

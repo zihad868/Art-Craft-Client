@@ -1,7 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/Logo/ArtCraft.jpeg";
+import { useContext } from "react";
+import { AuthProvider } from "../../Provider/FirebaseAuthProvider";
 
 const Nav = () => {
+  const { user, logoutUser } = useContext(AuthProvider);
+
+  const handleLogout = () => {
+    logoutUser()
+  }
   const navLink = (
     <>
       <NavLink
@@ -79,15 +86,35 @@ const Nav = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div className="space-x-3">
-          <Link to="/signin" className="btn">
-            Sign in
-          </Link>
-          <Link to="/signup" className="btn">
-            Sign up
-          </Link>
-        </div>
-      </div>
+            {user ? (
+              <>
+                {/* Profile */}
+                <div className="dropdown dropdown-hover">
+                  <div tabIndex={0}>
+                    <img className="w-16 h-16 mr-8 rounded-full" src={user?.photoURL} alt="" />
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
+                  >
+                    <p>{user?.displayName}</p>
+                    <button onClick={handleLogout} className="btn bg-gray-300  mt-2">Logout</button>
+                  </ul>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="space-x-3">
+                  <Link to="/signin" className="btn">
+                    Sign in
+                  </Link>
+                  <Link to="/signup" className="btn">
+                    Sign up
+                  </Link>
+                </div>
+              </>
+            )}
+          </div>
     </div>
   );
 };

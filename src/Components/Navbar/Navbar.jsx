@@ -7,8 +7,6 @@ import { AuthProvider } from "../../Provider/FirebaseAuthProvider";
 const Navbar = () => {
   const { user, logoutUser } = useContext(AuthProvider);
 
-  console.log(user);
-
   const handleLogout = () => {
     logoutUser()
   }
