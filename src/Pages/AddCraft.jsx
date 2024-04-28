@@ -1,7 +1,10 @@
 import { useContext, useState } from "react";
 import { AuthProvider } from "../Provider/FirebaseAuthProvider";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const AddCraft = () => {
+  const navigate = useNavigate();
   const { user } = useContext(AuthProvider);
   const [status, setStatus] = useState('')
   const [customization, setCustomization] = useState('')
@@ -46,8 +49,10 @@ const AddCraft = () => {
       email,
     };
 
+    // console.log(craftItem)
 
-    fetch('/add-craft', {
+
+    fetch('http://localhost:5000/addCraft', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -56,7 +61,16 @@ const AddCraft = () => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
+        if(data.acknowledged){
+          Swal.fire({
+            position: "top",
+            icon: "success",
+            title: "Craft has been saved",
+            showConfirmButton: false,
+            timer: 1500
+          });
+          e.target.reset();
+        }
       })
   };
   return (
