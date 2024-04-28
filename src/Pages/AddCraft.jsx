@@ -32,10 +32,11 @@ const AddCraft = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
 
-    console.log(
+    const craftItem = {
       photo,
       itemName,
       subCategoryName,
+      customization,
       shortDescription,
       price,
       rating,
@@ -43,8 +44,20 @@ const AddCraft = () => {
       status,
       name,
       email,
-      customization
-    );
+    };
+
+
+    fetch('/add-craft', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(craftItem)
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+      })
   };
   return (
     <div>
