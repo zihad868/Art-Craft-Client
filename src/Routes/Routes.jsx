@@ -7,11 +7,13 @@ import MyCraft from "../Pages/MyCraft";
 import Signup from "../Pages/Signup";
 import Signin from "../Pages/Signin";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/",
