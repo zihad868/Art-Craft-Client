@@ -9,7 +9,6 @@ const MyCraftCard = ({ craft }) => {
         itemName,
         subCategoryName,
         customization,
-        shortDescription,
         price,
         rating,
         status
@@ -38,8 +37,8 @@ const MyCraftCard = ({ craft }) => {
         </div>
 
         <div className="p-4 grid grid-cols-2 gap-4">
+           <Link to={`/update/${_id}`}><button className="w-full rounded-lg bg-secondary p-3 font-bold text-white">Update</button></Link>
             <Link><button className="w-full rounded-lg bg-red-500 p-3 font-bold text-white">Delete</button></Link>
-            <Link><button className="w-full rounded-lg bg-secondary p-3 font-bold text-white">Update</button></Link>
         </div>
       </div>
     );

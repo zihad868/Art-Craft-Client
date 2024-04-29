@@ -7,7 +7,6 @@ const MyCraft = () => {
     const { user } = useContext(AuthProvider)
     const [crafts, setCrafts] = useState([])
 
-    console.log(user.email)
     useEffect(()=>{
         fetch(`http://localhost:5000/myCraft/${user?.email}`)
            .then(res => res.json())
@@ -16,7 +15,7 @@ const MyCraft = () => {
            })
     },[user])
     
-    console.log(crafts)
+
     return (
         <div>
             <h1 className="text-2xl font-bold text-center text-green-400">My Craft</h1>

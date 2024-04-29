@@ -9,6 +9,7 @@ import Signin from "../Pages/Signin";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import CraftDetails from "../Pages/CraftDetails";
+import Update from "../Pages/Update";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: '/signin',
         element: <Signin />
+      },
+      {
+        path: '/update/:id',
+        element: <Update />,
+        loader: ({params}) => fetch(`http://localhost:5000/getsCraft/${params.id}`)
       }
     ],
   },
