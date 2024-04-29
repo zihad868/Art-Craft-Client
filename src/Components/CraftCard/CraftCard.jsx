@@ -12,10 +12,7 @@ const CraftCard = ({ craft }) => {
     shortDescription,
     price,
     rating,
-    processingTime,
-    status,
-    name,
-    email,
+    status
   } = craft;
 
   return (
