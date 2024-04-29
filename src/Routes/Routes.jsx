@@ -10,6 +10,8 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import CraftDetails from "../Pages/CraftDetails";
 import Update from "../Pages/Update";
+import Subcategory from "../Components/Subcategory/Subcategory";
+import AddSubcategory from "../Components/Subcategory/AddSubcategory";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +56,10 @@ const router = createBrowserRouter([
         path: '/update/:id',
         element: <Update />,
         loader: ({params}) => fetch(`http://localhost:5000/getsCraft/${params.id}`)
+      },
+      {
+        path: '/addSubcategory',
+        element: <AddSubcategory />,
       }
     ],
   },
