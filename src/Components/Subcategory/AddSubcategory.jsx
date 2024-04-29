@@ -1,5 +1,37 @@
+import Swal from "sweetalert2";
+
 const AddSubcategory = () => {
-  const handleSubcategory = (e) => {};
+  const handleSubcategory = (e) => {
+    e.preventDefault();
+
+    const photo = e.target.photo.value;
+    const itemName = e.target.itemName.value;
+    const processingTime = e.target.processingTime.value;
+    const subcategoryName = e.target.subcategoryName.value;
+
+    const categoryData = {photo, itemName, processingTime, subcategoryName};
+
+    fetch('http://localhost:5000/addCategory', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(categoryData)
+    })
+      .then(res => res.json())
+      .then(data => {
+         if(data.acknowledged){
+          Swal.fire({
+            position: "top",
+            icon: "success",
+            title: "Category has been saved",
+            showConfirmButton: false,
+            timer: 1500
+          });
+         }
+      })
+    
+  };
 
   return (
     <div className="mb-10">
@@ -34,12 +66,12 @@ const AddSubcategory = () => {
 
           <div className="p-3">
             <label className="label">
-              <span className="label-text">Sub Category Name</span>
+              <span className="label-text">Subcategory Name</span>
             </label>
             <input
               type="text"
               name="subcategoryName"
-              placeholder="Item Name"
+              placeholder="Subcategory Name"
               className="input input-bordered w-full"
             />
           </div>
@@ -49,7 +81,7 @@ const AddSubcategory = () => {
               <span className="label-text">Processing Time</span>
             </label>
             <input
-              type="text"
+              type="time"
               name="processingTime"
               placeholder="Processing Time"
               className="input input-bordered w-full"
