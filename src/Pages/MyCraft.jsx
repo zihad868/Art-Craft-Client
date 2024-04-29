@@ -5,7 +5,8 @@ import MyCraftCard from "../Components/MyCraftCard/MyCraftCard";
 
 const MyCraft = () => {
     const { user } = useContext(AuthProvider)
-    const [crafts, setCrafts] = useState([])
+    const [crafts, setCrafts] = useState([]);
+    const [isDeleted, setIsdeleted] = useState(true);
 
     useEffect(()=>{
         fetch(`http://localhost:5000/myCraft/${user?.email}`)
@@ -13,7 +14,7 @@ const MyCraft = () => {
            .then(data => {
               setCrafts(data);
            })
-    },[user])
+    },[user, isDeleted])
     
 
     return (
@@ -21,7 +22,7 @@ const MyCraft = () => {
             <h1 className="text-2xl font-bold text-center text-green-400">My Craft</h1>
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 border-red-500 mt-5">
                 {
-                    crafts.map(craft => <MyCraftCard key={craft._id} craft={craft}/>)
+                    crafts.map(craft => <MyCraftCard key={craft._id} craft={craft} isDeleted={isDeleted} setIsdeleted={setIsdeleted}/>)
                 }
             </div>
         </div>

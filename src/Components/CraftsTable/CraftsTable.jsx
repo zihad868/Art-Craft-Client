@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const CraftsTable = ({ craft }) => {
-  console.log(craft);
   return (
     <tr className="border-b border-opacity-20 dark:border-gray-300 dark:bg-gray-50">
                   <td className="p-3">

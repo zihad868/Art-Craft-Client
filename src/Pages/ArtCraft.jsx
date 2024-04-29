@@ -4,7 +4,6 @@ import CraftsTable from "../Components/CraftsTable/CraftsTable";
 const ArtCraft = () => {
   const crafts = useLoaderData();
 
-  console.log(crafts);
   return (
     <div>
       <h3 className="font-bold text-2xl text-center text-slate-500">

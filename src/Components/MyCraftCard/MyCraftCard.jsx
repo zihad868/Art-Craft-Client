@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import imageNotFound from "../../assets/BackgroundImage/imageNotFound.png";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const MyCraftCard = ({ craft }) => {
+const MyCraftCard = ({ craft, isDeleted ,setIsdeleted }) => {
     const {
         _id,
         photo,
@@ -13,6 +14,25 @@ const MyCraftCard = ({ craft }) => {
         rating,
         status
       } = craft;
+
+    const handleDelete = (id) => {
+      fetch(`http://localhost:5000/delete/${id}`, {
+        method: 'DELETE'
+      })
+         .then(res => res.json())
+         .then(data => {
+            if(data.deletedCount == 1){
+              Swal.fire({
+                position: "top",
+                icon: "success",
+                title: "Craft Item Successfully Removed",
+                showConfirmButton: false,
+                timer: 1500
+              });
+              setIsdeleted(!isDeleted);
+            }
+         })
+    }
 
     return (
         <div>
@@ -37,8 +57,8 @@ const MyCraftCard = ({ craft }) => {
         </div>
 
         <div className="p-4 grid grid-cols-2 gap-4">
-           <Link to={`/update/${_id}`}><button className="w-full rounded-lg bg-secondary p-3 font-bold text-white">Update</button></Link>
-            <Link><button className="w-full rounded-lg bg-red-500 p-3 font-bold text-white">Delete</button></Link>
+            <Link to={`/update/${_id}`}><button className="w-full rounded-lg bg-secondary p-3 font-bold text-white">Update</button></Link>
+            <Link onClick={() => handleDelete(_id)}><button className="w-full rounded-lg bg-red-500 p-3 font-bold text-white">Delete</button></Link>
         </div>
       </div>
     );
