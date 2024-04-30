@@ -1,10 +1,8 @@
 import { useContext, useState } from "react";
 import { AuthProvider } from "../Provider/FirebaseAuthProvider";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
 
 const AddCraft = () => {
-  const navigate = useNavigate();
   const { user } = useContext(AuthProvider);
   const [status, setStatus] = useState('')
   const [customization, setCustomization] = useState('')

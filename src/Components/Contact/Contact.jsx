@@ -5,6 +5,7 @@ import ContactCard from "./ContactCard";
 const Contact = () => {
     const loadedData = useLoaderData();
 
+    console.log(loadedData)
     console.log(loadedData);
     return (
         <div>

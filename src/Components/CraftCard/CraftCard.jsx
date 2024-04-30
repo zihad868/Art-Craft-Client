@@ -20,7 +20,7 @@ const CraftCard = ({ craft }) => {
       <div className="border-2 bg-gray-100">
         <div className="p-2 flex justify-center items-center">
           <img
-            className="rounded-xl w-full h-[600px] p-4"
+            className="rounded-xl w-full h-[400px] p-4"
             src={photo || imageNotFound}
             alt=""
           />
