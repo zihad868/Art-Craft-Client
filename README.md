@@ -17,6 +17,14 @@
 - React Hook form
 - Animate.css
 
+  ## selected category:  Jute & wooden Crafts
+- Wooden Furniture & Sculptures
+- Wooden Home Decor
+- Wooden Utensils and Kitchenware
+- Jute Home Decor
+- Jute Kitchenware & utensils
+- Jute and wooden jewellery
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
