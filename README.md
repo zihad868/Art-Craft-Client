@@ -15,7 +15,11 @@
 ## npm package
 - Swiper slider
 - React Hook form
-- Animate.css
+- react-icons
+- sweetalert2
+- react-simple-typewriter
+- react-awesome-reveal
+- firebase
 
   ## selected category:  Jute & wooden Crafts
 - Wooden Furniture & Sculptures
