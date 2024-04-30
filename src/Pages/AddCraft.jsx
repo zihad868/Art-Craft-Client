@@ -174,7 +174,7 @@ const AddCraft = () => {
               <span className="label-text">Processing Time</span>
             </label>
             <input
-              type="text"
+              type="time"
               name="processingTime"
               placeholder="Processing Time"
               className="input input-bordered w-full"

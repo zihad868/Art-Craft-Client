@@ -69,7 +69,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/contact',
-        element: <Contact />
+        element: <Contact />,
+        loader: () => fetch('http://localhost:5000/getsCraft')
       }
     ],
   },
