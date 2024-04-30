@@ -12,6 +12,8 @@ import CraftDetails from "../Pages/CraftDetails";
 import Update from "../Pages/Update";
 import Subcategory from "../Components/Subcategory/Subcategory";
 import AddSubcategory from "../Components/Subcategory/AddSubcategory";
+import CraftDesign from "../Components/CraftDesign/CraftDesign";
+import Contact from "../Components/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +62,14 @@ const router = createBrowserRouter([
       {
         path: '/addSubcategory',
         element: <AddSubcategory />,
+      },
+      {
+        path: '/craftDesign',
+        element: <CraftDesign />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
       }
     ],
   },

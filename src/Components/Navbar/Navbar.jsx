@@ -40,6 +40,23 @@ const Navbar = () => {
       >
         My Art Craft
       </NavLink>
+      <NavLink
+        to="/craftDesign"
+        className={({ isActive }) =>
+          isActive ? "bg-sky-300 rounded-lg p-2" : "p-2"
+        }
+      >
+        Craft Design 
+      </NavLink>
+
+      <NavLink
+        to="/contact"
+        className={({ isActive }) =>
+          isActive ? "bg-sky-300 rounded-lg p-2" : "p-2"
+        }
+      >
+        Contact
+      </NavLink>
     </>
   );
 
@@ -78,13 +95,13 @@ const Navbar = () => {
             </div>
             <div className="flex items-center justify-center">
               <img className="rounded-xl w-12" src={logo} alt="" />
-              <a className="btn btn-ghost text-5xl text-green-900">
+              <a className="btn btn-ghost text-3xl text-green-900">
                 Art<span className="text-">Craft</span>
               </a>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal space-x-6 font-bold text-2xl text-white">
+            <ul className="menu menu-horizontal space-x-6 font-bold text-xl text-white">
               {navLink}
             </ul>
           </div>
