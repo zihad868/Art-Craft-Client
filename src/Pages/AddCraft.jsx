@@ -35,6 +35,12 @@ const AddCraft = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
 
+              
+    const contact = e.target.contact.value;
+    const address = e.target.address.value;
+
+    console.log(contact, address)
+
     const craftItem = {
       photo,
       itemName,
@@ -47,6 +53,8 @@ const AddCraft = () => {
       status,
       name,
       email,
+      contact,
+      address
     };
 
     // console.log(craftItem)
@@ -96,6 +104,7 @@ const AddCraft = () => {
             <input
               type="text"
               name="itemName"
+              defaultValue={'Jute & wooden Crafts'}
               placeholder="Item Name"
               className="input input-bordered w-full"
             />
@@ -219,6 +228,35 @@ const AddCraft = () => {
               className="input input-bordered w-full"
             />
           </div>
+
+
+          <div className="p-3">
+            <label className="label">
+              <span className="label-text">Contact</span>
+            </label>
+            <input
+              type="text"
+              name="contact"
+              defaultValue={"+88014766465"}
+              placeholder="Contact Number"
+              className="input input-bordered w-full"
+            />
+          </div>
+
+          <div className="p-3">
+            <label className="label">
+              <span className="label-text">Address</span>
+            </label>
+            <input
+              type="text"
+              name="address"
+              defaultValue={"Gopalpur, Tangail"}
+              placeholder="Address"
+              className="input input-bordered w-full"
+            />
+          </div>
+          
+
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Add Craft</button>

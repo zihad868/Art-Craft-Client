@@ -27,6 +27,7 @@ const Update = () => {
     processingTime,
   } = craft;
 
+  console.log(craft)
 
   const handleUpdate = (e) => {
     e.preventDefault()

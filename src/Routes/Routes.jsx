@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       {
         path: '/update/:id',
         element: <Update />,
-        loader: ({params}) => fetch(`https://art-craft-code-mama.vercel.app/${params.id}`)
+        loader: ({params}) => fetch(`https://art-craft-code-mama.vercel.app/getsCraft/${params.id}`)
       },
       {
         path: '/addSubcategory',
