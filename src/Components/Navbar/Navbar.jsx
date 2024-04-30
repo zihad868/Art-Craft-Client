@@ -3,14 +3,14 @@ import logo from "../../assets/Logo/ArtCraft.jpeg";
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthProvider } from "../../Provider/FirebaseAuthProvider";
-import { Typewriter } from 'react-simple-typewriter'
+import { Typewriter } from "react-simple-typewriter";
 
 const Navbar = () => {
   const { user, logoutUser } = useContext(AuthProvider);
 
   const handleLogout = () => {
-    logoutUser()
-  }
+    logoutUser();
+  };
 
   const navLink = (
     <>
@@ -94,14 +94,23 @@ const Navbar = () => {
                 {/* Profile */}
                 <div className="dropdown dropdown-hover">
                   <div tabIndex={0}>
-                    <img className="w-16 h-16 mr-8 rounded-full" src={user?.photoURL} alt="" />
+                    <img
+                      className="w-16 h-16 mr-8 rounded-full"
+                      src={user?.photoURL}
+                      alt=""
+                    />
                   </div>
                   <ul
                     tabIndex={0}
                     className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
                   >
                     <p>{user?.displayName}</p>
-                    <button onClick={handleLogout} className="btn bg-gray-300  mt-2">Logout</button>
+                    <button
+                      onClick={handleLogout}
+                      className="btn bg-gray-300  mt-2"
+                    >
+                      Logout
+                    </button>
                   </ul>
                 </div>
               </>
@@ -124,22 +133,21 @@ const Navbar = () => {
       {/* Banner */}
       <div className="mt-36">
         <h1 className="text-5xl text-sky-500 font-bold uppercase text-center ">
-          Craft Someth{''}
-          <span style={{ color: 'red', fontWeight: 'bold' }}>
-          {/* Style will be inherited from the parent element */}
-          <Typewriter
-            words={['ings Beautiful']}
-            loop={5}
-            cursor
-            cursorStyle=''
-            typeSpeed={80}
-            deleteSpeed={50}
-            delaySpeed={1000}
-            // onLoopDone={handleDone}
-            // onType={handleType}
-          />
-        </span>
-
+          Craft Someth{""}
+          <span style={{ color: "red", fontWeight: "bold" }}>
+            {/* Style will be inherited from the parent element */}
+            <Typewriter
+              words={["ings Beautiful"]}
+              loop={5}
+              cursor
+              cursorStyle=""
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1000}
+              // onLoopDone={handleDone}
+              // onType={handleType}
+            />
+          </span>
         </h1>
         <p className="w-3/4 text-2xl text-gray-900 mt-9 text-center mx-auto">
           Embrace the warmth of genuine smiles, the allure of shared stories,

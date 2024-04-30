@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/Logo/ArtCraft.jpeg";
 import { useContext } from "react";
 import { AuthProvider } from "../../Provider/FirebaseAuthProvider";
+import { Typewriter } from "react-simple-typewriter";
 
 const Nav = () => {
   const { user, logoutUser } = useContext(AuthProvider);
@@ -76,7 +77,21 @@ const Nav = () => {
         <div className="flex items-center justify-center">
           <img className="rounded-xl w-12" src={logo} alt="" />
           <a className="btn btn-ghost text-5xl text-green-900">
-            Art<span className="text-">Craft</span>
+            Art
+            <span style={{ color: "red", fontWeight: "bold" }}>
+            {/* Style will be inherited from the parent element */}
+            <Typewriter
+              words={["Craft"]}
+              loop={5}
+              cursor
+              cursorStyle=""
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1000}
+              // onLoopDone={handleDone}
+              // onType={handleType}
+            />
+          </span>
           </a>
         </div>
       </div>

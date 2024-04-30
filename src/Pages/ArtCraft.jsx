@@ -1,13 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import CraftsTable from "../Components/CraftsTable/CraftsTable";
+import { Zoom } from "react-awesome-reveal";
 
 const ArtCraft = () => {
   const crafts = useLoaderData();
 
   return (
     <div>
-      <h3 className="font-bold text-2xl text-center text-slate-500">
-        All Art Craft
+      <h3 className="font-bold text-3xl text-center text-green-500">
+        <Zoom>All Art Craft</Zoom>
       </h3>
 
       <div>
