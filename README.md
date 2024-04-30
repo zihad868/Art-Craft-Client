@@ -8,6 +8,7 @@
 ## Features and characteristics
 - Login users can visit Add Craft, Update Craft, My Craft
 -  CRUD Functionality Express, MongoDB
+-  Only each person can update and delete there items
 - Register with Email Address 
 - Login with Email, GitHub, and Google Account
 - Wrong URL visit display page not found
