@@ -6,7 +6,7 @@ const CraftItems = () => {
     const [crafts, setCrafts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/getsCraft')
+        fetch('https://art-craft-code-mama.vercel.app/getsCraft')
           .then(res => res.json())
           .then(data => setCrafts(data))
     }, [])

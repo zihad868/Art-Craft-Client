@@ -52,7 +52,7 @@ const AddCraft = () => {
     // console.log(craftItem)
 
 
-    fetch('http://localhost:5000/addCraft', {
+    fetch('https://art-craft-code-mama.vercel.app/addCraft', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

@@ -10,7 +10,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import CraftDetails from "../Pages/CraftDetails";
 import Update from "../Pages/Update";
-import Subcategory from "../Components/Subcategory/Subcategory";
+// import Subcategory from "../Components/Subcategory/Subcategory";
 import AddSubcategory from "../Components/Subcategory/AddSubcategory";
 import CraftDesign from "../Components/CraftDesign/CraftDesign";
 import Contact from "../Components/Contact/Contact";
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/art-craft",
         element: <ArtCraft />,
-        loader: () => fetch('http://localhost:5000/getsCraft')
+        loader: () => fetch('https://art-craft-code-mama.vercel.app/getsCraft')
       },
 
       {
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: '/craft-details/:id',
         element: <PrivateRoute> <CraftDetails /> </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/getsCraft/${params.id}`)
+        loader: ({params}) => fetch(`https://art-craft-code-mama.vercel.app/t/${params.id}`)
       },
 
       {
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       {
         path: '/update/:id',
         element: <Update />,
-        loader: ({params}) => fetch(`http://localhost:5000/getsCraft/${params.id}`)
+        loader: ({params}) => fetch(`https://art-craft-code-mama.vercel.app/${params.id}`)
       },
       {
         path: '/addSubcategory',
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
-        loader: () => fetch('http://localhost:5000/getsCraft')
+        loader: () => fetch('https://art-craft-code-mama.vercel.app/getsCraft')
       }
     ],
   },

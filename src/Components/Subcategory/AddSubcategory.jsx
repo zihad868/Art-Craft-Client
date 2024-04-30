@@ -11,7 +11,7 @@ const AddSubcategory = () => {
 
     const categoryData = {photo, itemName, processingTime, subcategoryName};
 
-    fetch('http://localhost:5000/addCategory', {
+    fetch('https://art-craft-code-mama.vercel.app/addCategory', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
