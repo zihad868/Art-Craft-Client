@@ -18,6 +18,8 @@ const CraftDetails = () => {
     email,
   } = craft;
 
+  console.log(photo)
+
   console.log(email, processingTime, customization, itemName, subCategoryName);
 
   return (

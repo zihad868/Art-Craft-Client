@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: '/craft-details/:id',
         element: <PrivateRoute> <CraftDetails /> </PrivateRoute>,
-        loader: ({params}) => fetch(`https://art-craft-code-mama.vercel.app/t/${params.id}`)
+        loader: ({params}) => fetch(`https://art-craft-code-mama.vercel.app/getsCraft/${params.id}`)
       },
 
       {
