@@ -29,13 +29,13 @@ const MyCraft = () => {
       <div className="flex justify-center items-center">
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="p-4 text-center font-bold text-2xl bg-green-500 hover:text-white m-1 w-52">
-            Sort By Rating
+            Sort By
           </div>
           <ul
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <button onClick={handleSorting} className="btn p-2 text-center font-bold text-xl bg-sky-300 hover:text-red-500">Descending</button>
+            <button onClick={handleSorting} className="btn p-2 text-center font-bold text-xl bg-sky-300 hover:text-red-500">Rating</button>
 
           </ul>
         </div>

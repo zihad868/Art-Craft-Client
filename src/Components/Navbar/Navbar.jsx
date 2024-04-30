@@ -3,6 +3,7 @@ import logo from "../../assets/Logo/ArtCraft.jpeg";
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthProvider } from "../../Provider/FirebaseAuthProvider";
+import { Typewriter } from 'react-simple-typewriter'
 
 const Navbar = () => {
   const { user, logoutUser } = useContext(AuthProvider);
@@ -122,8 +123,23 @@ const Navbar = () => {
 
       {/* Banner */}
       <div className="mt-36">
-        <h1 className="text-5xl text-sky-400 font-bold uppercase text-center ">
-          Craft Someth<span className="text-rose-500">ings Beautiful</span>
+        <h1 className="text-5xl text-sky-500 font-bold uppercase text-center ">
+          Craft Someth{''}
+          <span style={{ color: 'red', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['ings Beautiful']}
+            loop={5}
+            cursor
+            cursorStyle=''
+            typeSpeed={80}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            // onLoopDone={handleDone}
+            // onType={handleType}
+          />
+        </span>
+
         </h1>
         <p className="w-3/4 text-2xl text-gray-900 mt-9 text-center mx-auto">
           Embrace the warmth of genuine smiles, the allure of shared stories,
