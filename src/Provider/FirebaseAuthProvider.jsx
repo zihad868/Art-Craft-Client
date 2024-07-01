@@ -12,31 +12,31 @@ const gitHubAuthprovider = new GithubAuthProvider();
 
 const FirebaseAuthProvider = ({ children }) => {
     const [user, setUser] = useState([]);
-    const [loding, setLoding] = useState(true);
+    const [loading, setLoading] = useState(true);
     
 
     const createUser = (email, password) => {
-        setLoding(true);
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const loginUser = (email, password) => {
-        setLoding(true);
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const googleLogin = () => {
-        setLoding(true);
+        setLoading(true);
         return signInWithPopup(auth, googleProvider)
     }
 
     const gitHubLogin = () => {
-        setLoding(true);
+        setLoading(true);
         return signInWithPopup(auth, gitHubAuthprovider)
     }
 
     const logoutUser = () => {
-        setLoding(true);
+        setLoading(true);
         return signOut(auth)
     }
 
@@ -50,7 +50,7 @@ const FirebaseAuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
-            setLoding(false);
+            setLoading(false);
         })
 
         return () => {
@@ -66,7 +66,7 @@ const FirebaseAuthProvider = ({ children }) => {
         gitHubLogin,
         logoutUser,
         updateUserProfile,
-        loding
+        loading
     }
 
 

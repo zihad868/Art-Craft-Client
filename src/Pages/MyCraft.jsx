@@ -9,7 +9,7 @@ const MyCraft = () => {
   const [sortByRating, setSortByRating] = useState(false);
 
   useEffect(() => {
-    fetch(`https://art-craft-code-mama.vercel.app/myCraft/${user?.email}?sort=${sortByRating}`)
+    fetch(`https://art-craft-tau.vercel.app/myCraft/${user?.email}?sort=${sortByRating}`)
       .then((res) => res.json())
       .then((data) => {
         setCrafts(data);

@@ -46,7 +46,7 @@ const Update = () => {
     console.log(updateCraft)
     console.log(_id);
 
-    fetch(`https://art-craft-code-mama.vercel.app/updateCraft/${_id}`, {
+    fetch(`https://art-craft-tau.vercel.app/updateCraft/${_id}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'

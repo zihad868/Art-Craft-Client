@@ -14,6 +14,7 @@ import Update from "../Pages/Update";
 import AddSubcategory from "../Components/Subcategory/AddSubcategory";
 import CraftDesign from "../Components/CraftDesign/CraftDesign";
 import Contact from "../Components/Contact/Contact";
+import CategoryDetails from "../Pages/CategoryDetails";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/art-craft",
         element: <ArtCraft />,
-        loader: () => fetch('https://art-craft-code-mama.vercel.app/getsCraft')
+        loader: () => fetch('https://art-craft-tau.vercel.app/getsCraft')
       },
 
       {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: '/craft-details/:id',
         element: <PrivateRoute> <CraftDetails /> </PrivateRoute>,
-        loader: ({params}) => fetch(`https://art-craft-code-mama.vercel.app/getsCraft/${params.id}`)
+        loader: ({params}) => fetch(`https://art-craft-tau.vercel.app/${params.id}`)
       },
 
       {
@@ -57,7 +58,7 @@ const router = createBrowserRouter([
       {
         path: '/update/:id',
         element: <Update />,
-        loader: ({params}) => fetch(`https://art-craft-code-mama.vercel.app/getsCraft/${params.id}`)
+        loader: ({params}) => fetch(`https://art-craft-tau.vercel.app/${params.id}`)
       },
       {
         path: '/addSubcategory',
@@ -68,9 +69,13 @@ const router = createBrowserRouter([
         element: <CraftDesign />
       },
       {
+        path: '/categoryDetails/:id',
+        element: <CategoryDetails />
+      },
+      {
         path: '/contact',
         element: <Contact />,
-        loader: () => fetch('https://art-craft-code-mama.vercel.app/getsCraft')
+        loader: () => fetch('https://art-craft-tau.vercel.app/getsCraft')
       }
     ],
   },

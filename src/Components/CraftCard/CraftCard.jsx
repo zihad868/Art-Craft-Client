@@ -16,8 +16,8 @@ const CraftCard = ({ craft }) => {
   } = craft;
 
   return (
-    <div>
-      <div className="border-2 bg-gray-100">
+    <div className="border-2 bg-gray-100 transition hover:scale-105">
+      <div>
         <div className="p-2 flex justify-center items-center">
           <img
             className="rounded-xl w-full h-[400px] p-4"
@@ -35,13 +35,16 @@ const CraftCard = ({ craft }) => {
           <p>Customization: {customization}</p>
         </div>
 
-        <p className="p-4">Description: {shortDescription}</p>
+        <p className="p-4 flex-grow">Description: {shortDescription.slice(0, 100)}{'...'}</p>
       </div>
+      <div className="mb-2 p-4">
       <Link to={`/craft-details/${_id}`}>
-        <button className="bg-green-500 w-full p-3 rounded-lg">
+        <button className="bg-sky-400 w-full p-3 rounded-lg">
           View Details
         </button>
       </Link>
+      </div>
+      
     </div>
   );
 };

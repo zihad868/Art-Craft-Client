@@ -26,7 +26,7 @@ const MyCraftCard = ({ craft, isDeleted, setIsdeleted }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://art-craft-code-mama.vercel.app/delete/${id}`, {
+        fetch(`https://art-craft-tau.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

@@ -58,7 +58,7 @@ const AddCraft = () => {
     // console.log(craftItem)
 
 
-    fetch('https://art-craft-code-mama.vercel.app/addCraft', {
+    fetch('https://art-craft-tau.vercel.app/addCraft', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
