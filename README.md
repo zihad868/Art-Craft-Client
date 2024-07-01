@@ -3,21 +3,32 @@
 ## Website Name:- Art & Craft
 
 ## Live Link
-- https://landnest-2f2f2.web.app/
+- https://artcraft-9fe4c.web.app
   
 ## Features and characteristics
-- Login users can visit Contact, User Profile and  Update Profile
-- Show estate details when  also user login
-- Updated Profile user can change Photo and Name
+- Login users can visit Add Craft, Update Craft, My Craft
+-  CRUD Functionality Express, MongoDB
+-  Only each person can update and delete there items
 - Register with Email Address 
 - Login with Email, GitHub, and Google Account
-- User profile displays user profile, name, email
 - Wrong URL visit display page not found
 
 ## npm package
 - Swiper slider
 - React Hook form
-- Animate.css
+- react-icons
+- sweetalert2
+- react-simple-typewriter
+- react-awesome-reveal
+- firebase
+
+  ## selected category:  Jute & wooden Crafts
+- Wooden Furniture & Sculptures
+- Wooden Home Decor
+- Wooden Utensils and Kitchenware
+- Jute Home Decor
+- Jute Kitchenware & utensils
+- Jute and wooden jewellery
 
 # React + Vite
 
