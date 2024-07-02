@@ -1,6 +1,7 @@
 
 
 ## Website Name:- Art & Craft
+The Art-Craft website allows registered users to post, update, and delete their craft items. Each user can manage only their own posts. Logged-in users can access "Add Craft," "Update Craft," and "My Craft" sections. CRUD functionality is implemented using Express and MongoDB. Registration is available via email, with login options through email, GitHub, and Google accounts. The "My Craft" route displays only the posts made by the logged-in user. Wrong URLs lead to a "Page Not Found" error, ensuring proper navigation and user-specific content management within a secure and user-friendly platform.
 
 ## Live Link
 - https://artcraft-9fe4c.web.app
