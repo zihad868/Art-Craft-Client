@@ -28,7 +28,12 @@
 - Wooden Utensils and Kitchenware
 - Jute Home Decor
 - Jute Kitchenware & utensils
-- Jute and wooden jewellery
+- Jute and wooden jewelry
+
+    ## Clone and Run Local
+-  first clone client
+-  command npm install
+-  setup firebase configuration in the .env file
 
 # React + Vite
 
